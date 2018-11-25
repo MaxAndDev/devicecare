@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click) = "onAdd()">
+        <ion-icon name = "add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Device Care</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+  <ion-fab right bottom>
+      <button ion-fab color="blue"  (click)="clickQRScan()">
+          <ion-icon name="qr-scanner"></ion-icon>
+      </button>
+  </ion-fab>
+  <ion-list>
+      <ion-item  *ngFor="let element of devices[0]" (click)="clickedItem(element._id)">{{element.producer}} {{element.model}}</ion-item>
+  </ion-list>
+</ion-content>

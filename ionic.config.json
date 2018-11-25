@@ -1,0 +1,7 @@
+{
+  "name": "devicecare",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

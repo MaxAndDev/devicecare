@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add new Device</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder = "Model" [(ngModel)] = "model"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder = "Producer" [(ngModel)] = "producer"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder = "Owner" [(ngModel)] = "owner"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full (click) = "addDevice()" >Add</button>
+
+</ion-content>

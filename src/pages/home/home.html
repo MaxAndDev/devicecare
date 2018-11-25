@@ -1,0 +1,16 @@
+<ion-content padding center text-center>
+    <ion-title>
+        Device Care
+      </ion-title>
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder = "E-Mail" [(ngModel)] = "email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder = "Passwort" type = "password" [(ngModel)] = "password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full (click)="onLogin()"> Log In </button>
+  <button ion-button full color = "light" (click)="onSignin()"> Sign In </button>
+</ion-content>

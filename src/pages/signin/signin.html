@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sign In</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-input placeholder = "E-Mail" [(ngModel)] = "email"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-input placeholder = "Password" type= "password" [(ngModel)] = "password"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-input placeholder = "Company" [(ngModel)] = "company"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder = "Name" [(ngModel)] = "name"></ion-input>
+  </ion-item>
+
+  <button ion-button full (click)="onRegister()" > Sign In </button>
+
+
+</ion-content>
