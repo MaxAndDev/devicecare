@@ -17,6 +17,27 @@
       <ion-input placeholder = "Owner" [(ngModel)] = "owner"></ion-input>
     </ion-item>
   </ion-list>
+  <ion-list >
+    <ion-list-header>
+      Accessories
+    </ion-list-header>
+    <ion-item>
+      <ion-label> Headphones </ion-label>
+      <ion-radio  value = "Headphones" (ionSelect) = "selectRadioButton($event)"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label> Charging Cable </ion-label>
+      <ion-radio value = "Charging Cable" (ionSelect) = "selectRadioButton($event)"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label> Adapter </ion-label>
+      <ion-radio  value = "Adapter" (ionSelect) = "selectRadioButton($event)"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label> None </ion-label>
+      <ion-radio  value = "None" (ionSelect) = "selectRadioButton($event)"></ion-radio>
+    </ion-item>
+  </ion-list>
 
   <button ion-button full (click) = "addDevice()" >Add</button>
 

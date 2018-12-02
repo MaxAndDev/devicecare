@@ -18,12 +18,21 @@ export class AddDevicePage {
   producer:string;
   owner:string;
 
+  accessories = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient, public alertCtrl: AlertController ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddDevicePage');
   }
+
+  selectRadioButton(value){
+      console.log(value);
+      this.accessories.push(value);
+      console.log(this.accessories);
+  }
+
 
   presentAlertError(){
     let alert = this.alertCtrl.create({
@@ -56,7 +65,8 @@ export class AddDevicePage {
       "model": this.model,
       "producer": this.producer,
       "owner": this.owner,
-      "status": "existing"  
+      "status": "existing",  
+      "accessories": this.accessories
     })
 
     this.result.subscribe( data => {
@@ -74,6 +84,7 @@ export class AddDevicePage {
       this.presentAlertError();
     })
 
+    
   }
 
 }
